@@ -1,0 +1,40 @@
+#!/bin/sh
+
+# source pywal colors
+# . "${HOME}/.cache/wal/colors.sh" &
+
+nb="#F0F0F0"
+ab="#98FF98"
+
+# load polybar
+$HOME/.config/polybar/launch.sh
+
+# fix cursor theme
+xsetroot -cursor_name left_ptr
+
+# fix java applications, requires wmname package
+wmname LG3D
+
+# create some desktops so switching is possible
+bspc monitor -d 1 2 3 4 5 6 7 8 9
+
+# set colors with pywal
+bspc config norma_border_color "$nb"
+bspc config active_border_color "$ab"
+bspc config focused_border_color "$ab"
+bspc config presel_border_color "$nb"
+
+# gaps and borders
+bspc config border_width         2
+bspc config window_gap           16
+
+# split ratio, 0.52 is default, slightly bigger left pane
+bspc config split_ratio          0.50
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+# fix gimp
+bspc rule -a Gimp desktop='^9' state=floating follow=on
+
+# fix steam
+bspc rule -a Steam desktop='^9' state=floating follow=on

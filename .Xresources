@@ -1,0 +1,6 @@
+#define myfg		#F0F0F0
+#define mybg		#0F0F0F
+#define myaccent	#98FF98
+
+
+#include ".xres/urxvt"
