@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ -f $HOME/.config/dmenu/dmenurc ]; then
+	. $HOME/.config/dmenu/dmenurc
+fi
+
+/usr/bin/dmenu_run -nb "$mybg" -sb "$myaccent" -sf "$mybg" -nf "$myfg" -fn "$myfont" -h "$myheight"
