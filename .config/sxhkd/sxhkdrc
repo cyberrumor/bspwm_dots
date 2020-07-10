@@ -38,6 +38,14 @@ super + y
 super + g
 	bspc node -s biggest
 
+# audio settings
+alt + equal
+	volumeup
+
+alt + minus
+	volumedown
+
+
 #
 # state/flags
 #

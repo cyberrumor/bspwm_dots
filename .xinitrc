@@ -42,10 +42,10 @@ feh --bg-scale $HOME/Pictures/SpaceTiltShifted.jpg
 sxhkd &
 
 # set mouse pointer
-# xsetroot capitaine-cursors left_ptr &
+xsetroot capitaine-cursors left_ptr &
 
 # start dunst
-# dunst >/dev/null 2>&1 &
+dunst >/dev/null 2>&1 &
 
 # picom
 # picom --experimental-backends &

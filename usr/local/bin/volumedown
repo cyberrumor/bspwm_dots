@@ -1,0 +1,35 @@
+#!/bin/bash
+# requires pamixer package to read out volume
+
+msgId="991049"
+
+currentvolume() {
+	pamixer --get-volume
+}
+
+if [[ $(( $(currentvolume) - 10 )) -le 0 ]]; then
+	pactl set-sink-mute @DEFAULT_SINK@ 0 && pactl set-sink-volume @DEFAULT_SINK@ 0%
+else
+	pactl set-sink-mute @DEFAULT_SINK@ 0 && pactl set-sink-volume @DEFAULT_SINK@ -10%
+fi
+
+send_notification() {
+	volume=$(currentvolume)
+	bar=$(seq -s "|" $(( $volume / 10 )) | sed 's/[0-9]//g')
+	barempty=$(seq -s "-" $(( (110 - $volume) / 10)) | sed 's/[0-9]//g')
+	dunstify -r "$msgId" "$bar$barempty"
+}
+
+correctly_notify() {
+	volume=$(currentvolume)
+	if [[ $volume -le 0 ]]; then
+		dunstify -r "$msgId" "---------"
+	else
+		send_notification
+	fi
+}
+
+correctly_notify
+
+# uncomment below if you want a bell on volumedown
+XDG_RUNTIME_DIR=/run/user/1000 paplay /usr/share/sounds/freedesktop/stereo/bell.oga
