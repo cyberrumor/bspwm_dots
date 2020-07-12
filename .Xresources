@@ -6,33 +6,34 @@
 #include ".xres/urxvt"
 
 ! black
-*.color0: #263640
-*.color8: #4a697d
+*.color0: #444444
+*.color8: #666666
 
 ! red
-*.color1: #d12f2c
-*.color9: #fa3935
+*.color1: #ff0044
+*.color9: #ff44CC
 
 ! green
-*.color2: #819400
-*.color10: #a4bd00
+*.color2: #00FF66
+*.color10: #66FFCC
 
 ! yellow
-*.color3: #b08500
-*.color11: #d9a400
+*.color3: #FFFF00
+*.color11: #ffff66
 
 ! blue
-*.color4: #2587cc
-*.color12: #2ca2f5
+*.color4: #0098FF
+*.color12: #00CCFF
 
 ! magenta
-*.color5: #696ebf
-*.color13: #8086e8
+*.color5: #DD0098
+*.color13: #FF0098
 
 ! cyan
-*.color6: #289c93
-*.color14: #33c5ba
+*.color6: #00FFFF
+! cyan bright, arch logo
+*.color14: #98ff98
 
 ! white
-*.color7: #bfbaac
-*.color15: #fdf6e3
+*.color7: #F0F0F0
+*.color15: #FCFCFC
