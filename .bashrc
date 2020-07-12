@@ -26,7 +26,7 @@ cd $XDG_HOME
 
 # neofetch
 if [[ $TERM == rxvt-unicode-256color ]]; then
-	clear && neofetch --color_blocks off
+	clear && neofetch --color_blocks off --refresh_rate on
 	# clear && neofetch
 else
 	clear
