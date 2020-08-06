@@ -26,9 +26,6 @@ fi
 # numlock
 numlockx on
 
-# Load nvidia-settings
-# nvidia-settings --load-config-only
-
 # set wallpaper with feh
 feh --bg-scale $HOME/Pictures/SpaceTiltShifted.jpg
 
@@ -36,13 +33,13 @@ feh --bg-scale $HOME/Pictures/SpaceTiltShifted.jpg
 # conky &
 
 # start xautolock
-# xautolock -time 30 -locker /usr/local/bin/lock &
+xautolock -time 30 -locker /usr/local/bin/lock &
 
 # simple x hotkey daemon
 sxhkd &
 
 # set mouse pointer
-xsetroot capitaine-cursors left_ptr &
+xsetroot -cursor_name left_ptr &
 
 # start dunst
 dunst >/dev/null 2>&1 &
