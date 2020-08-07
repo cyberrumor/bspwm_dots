@@ -29,7 +29,7 @@ font-1 = "Wuncon Siji:size=9;3"
 
 ; Modules are added to one of the available blocks
 modules-left = bspwm
-modules-right = temp date
+modules-right = gpu temp date
 
 ;separator =
 ; This value is used to add extra spacing between elements
@@ -83,10 +83,16 @@ label =  %time%
 label-foreground = ${colors.colorhighlighted}
 label-padding = 1
 
+[module/gpu]
+type = custom/script
+exec = cat /sys/devices/pci0000:00/0000:00:08.1/0000:09:00.0/hwmon/hwmon2/temp1_input | head -c 2
+interval = 5
+format-prefix = "GPU:"
+label = %output%
+
 [module/temp]
 type = custom/script
 exec = cat /sys/class/hwmon/hwmon1/temp1_input | head -c 2
-units = false
 interval = 5
 format-prefix = "CPU:"
 label = %output%
