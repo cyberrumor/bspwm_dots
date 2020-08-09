@@ -11,9 +11,13 @@
 
 # set ls colors
 alias ls='ls --color=auto'
-
 # delete vi from git
 alias git='EDITOR=nano git'
+# no steam locomotives
+alias sl='ls'
+
+# enable auto-cd
+shopt -s autocd
 
 # set prompt
 PS1='[\u@\h \W]\$ '

@@ -29,7 +29,7 @@ font-1 = "Wuncon Siji:size=9;3"
 
 ; Modules are added to one of the available blocks
 modules-left = bspwm
-modules-right = gpu temp date
+modules-right = fs gpu temp date
 
 ;separator =
 ; This value is used to add extra spacing between elements
@@ -82,6 +82,15 @@ time = %A, %B %d - %I:%M %p
 label =  %time%
 label-foreground = ${colors.colorhighlighted}
 label-padding = 1
+
+[module/fs]
+type = internal/fs
+mount-0 = /
+interval = 60
+fixed-values = false
+format-mounted = <label-mounted>
+label-mounted = %mountpoint% | %free%
+
 
 [module/gpu]
 type = custom/script
