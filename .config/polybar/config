@@ -101,19 +101,19 @@ label-mounted = %mountpoint% | %free%
 #label = %output%
 
 # for rx580
-[module/gpu]
+[module/temp]
 type = custom/script
 exec = cat /sys/class/hwmon/hwmon3/temp1_input | head -c 2
 interval = 5
-format-prefix = "GPU:"
+format-prefix = "CPU:"
 label = %output%
 
 
-[module/temp]
+[module/gpu]
 type = custom/script
-exec = cat /sys/class/hwmon/hwmon1/temp1_input | head -c 2
+exec = cat /sys/class/hwmon/hwmon2/temp1_input | head -c 2
 interval = 5
-format-prefix = "CPU:"
+format-prefix = "GPU:"
 label = %output%
 
 ;[module/gputemp]
