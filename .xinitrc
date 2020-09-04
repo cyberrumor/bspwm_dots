@@ -27,13 +27,13 @@ fi
 numlockx on
 
 # set wallpaper with feh
-feh --bg-scale $HOME/Pictures/HoursOfTranquility.jpg
+feh --bg-scale $HOME/Pictures/SpaceTiltShifted.jpg
 
 # start conky
 # conky &
 
 # start xautolock
-xautolock -time 30 -locker /usr/local/bin/lock &
+# xautolock -time 30 -locker /usr/local/bin/lock &
 
 # simple x hotkey daemon
 sxhkd &

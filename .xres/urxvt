@@ -2,7 +2,7 @@ URxvt*foreground:		myfg
 URxvt*background:		mybg
 URxvt*highlightColor:		myaccent
 URxvt*highlightTextColor:	mybg
-URxvt*font:			xft:UbuntuMono-R:size=12
+URxvt*font:			xft:Terminus:style=Regular:size=14
 URxvt*internalBorder:		20
 URxvt*transparent:		true
 URxvt*shading:			5
