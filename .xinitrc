@@ -27,7 +27,7 @@ fi
 numlockx on
 
 # set wallpaper with feh
-feh --bg-scale $HOME/Pictures/SpaceTiltShifted.jpg
+# feh --bg-scale $HOME/Pictures/SpaceTiltShifted.jpg
 
 # start conky
 # conky &

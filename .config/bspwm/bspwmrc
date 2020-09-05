@@ -15,8 +15,8 @@ xsetroot -cursor_name left_ptr
 # fix display resolution
 xrandr --output DisplayPort-0 --mode 1920x1080 --rate 144
 
-# fix bluetooth
-rfkill block bluetooth && rfkill unblock all
+# set wallpaper
+feh --bg-scale /home/cyberrumor/Pictures/SpaceTiltShifted.jpg
 
 # fix java applications, requires wmname package
 wmname LG3D
