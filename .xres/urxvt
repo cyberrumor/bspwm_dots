@@ -4,6 +4,6 @@ URxvt*highlightColor:		myaccent
 URxvt*highlightTextColor:	mybg
 URxvt*font:			xft:Terminus:style=Regular:size=14
 URxvt*internalBorder:		20
-URxvt*transparent:		true
-URxvt*shading:			5
+URxvt*transparent:		false
+URxvt*shading:			0
 URxvt*scrollBar:		false

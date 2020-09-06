@@ -1,22 +1,15 @@
 #!/bin/sh
-
-# source pywal colors
-# . "${HOME}/.cache/wal/colors.sh" &
-
 nb="#F0F0F0"
 ab="#98FF98"
 
 # load polybar
 $HOME/.config/polybar/launch.sh
 
-# fix cursor theme
-xsetroot -cursor_name left_ptr
-
-# fix display resolution
-xrandr --output DisplayPort-0 --mode 1920x1080 --rate 144
-
 # set wallpaper
-feh --bg-scale /home/cyberrumor/Pictures/SpaceTiltShifted.jpg
+# feh --bg-scale /home/cyberrumor/Pictures/SpaceTiltShifted.jpg
+
+# set refresh rate, scripts in /usr/local/bin. See man xrandr.
+hz144
 
 # fix java applications, requires wmname package
 wmname LG3D

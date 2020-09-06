@@ -29,9 +29,9 @@ cd $XDG_HOME
 # export SSLKEYLOGFILE=~/.ssl-key.log
 
 # neofetch
-if [[ $TERM == rxvt-unicode-256color ]]; then
+if [[ $TERM == alacritty ]]; then
 	clear && neofetch --color_blocks off --refresh_rate on
-	# clear && neofetch
+#	# clear && neofetch
 else
 	clear
 fi

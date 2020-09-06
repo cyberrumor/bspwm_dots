@@ -26,29 +26,11 @@ fi
 # numlock
 numlockx on
 
-# set wallpaper with feh
-# feh --bg-scale $HOME/Pictures/SpaceTiltShifted.jpg
-
-# start conky
-# conky &
-
-# start xautolock
-# xautolock -time 30 -locker /usr/local/bin/lock &
-
-# simple x hotkey daemon
-sxhkd &
-
 # set mouse pointer
 xsetroot -cursor_name left_ptr &
 
-# start dunst
-dunst >/dev/null 2>&1 &
-
-# picom
-# picom --experimental-backends &
-
-# floating desktop
-# create_floating_window_desktop.sh &
-
 # start bspwm
-exec bspwm
+sxhkd & exec bspwm
+
+# start i3
+# exec i3
