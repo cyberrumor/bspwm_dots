@@ -1,0 +1,35 @@
+window:
+  padding:
+    x: 16
+    y: 16
+
+
+# scorcerer colors
+colors:
+  primary:
+    background: '#0F0F0F'
+    foreground: '#F0F0F0'
+
+  cursor:
+    text:   '#0F0F0F'
+    cursor: '#F0F0F0'
+
+  normal:
+    black:   '#000000'
+    red:     '#FF9898'
+    green:   '#98FF98'
+    yellow:  '#FFFF98'
+    blue:    '#9898FF'
+    magenta: '#8f6f8f'
+    cyan:    '#98FFFF'
+    white:   '#F0F0F0'
+
+  bright:
+    black:   '#000000'
+    red:     '#FF7878'
+    green:   '#78FF78'
+    yellow:  '#FFFF78'
+    blue:    '#7878FF'
+    magenta: '#8f6f8f'
+    cyan:    '#78FFFF'
+    white:   '#F0F0F0'

@@ -26,11 +26,5 @@ fi
 # numlock
 numlockx on
 
-# set mouse pointer
-xsetroot -cursor_name left_ptr &
-
 # start bspwm
 sxhkd & exec bspwm
-
-# start i3
-# exec i3
