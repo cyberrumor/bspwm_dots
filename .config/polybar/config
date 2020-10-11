@@ -29,7 +29,7 @@ font-0 = "Terminus:style=Regular:size=14:1:antialias=true; 2"
 
 ; Modules are added to one of the available blocks
 modules-left = bspwm
-modules-right = fs gpu temp date
+modules-right = memory fs gpu temp date
 
 ;separator =
 ; This value is used to add extra spacing between elements
@@ -45,7 +45,7 @@ tray-background = ${colors.background}
 tray-offset-x = 0
 tray-offset-y = 0
 ; Pad the sides of each tray icon
-tray-padding = 0
+tray-padding = 2
 
 [global/wm]
 margin-bottom = 0
@@ -81,7 +81,7 @@ interval = 5
 time = %A, %B %d - %I:%M %p
 label =  %time%
 label-foreground = ${colors.colorhighlighted}
-label-padding = 1
+label-padding = 2
 
 [module/fs]
 type = internal/fs
@@ -89,7 +89,10 @@ mount-0 = /
 interval = 60
 fixed-values = false
 format-mounted = <label-mounted>
-label-mounted = %mountpoint% | %free%
+label-mounted = %used% | %total%
+label-padding-right = 4
+
+
 
 # for integrated graphics
 #[module/gpu]
@@ -107,7 +110,6 @@ interval = 5
 format-prefix = "CPU:"
 label = %output%
 
-
 [module/gpu]
 type = custom/script
 exec = cat /sys/class/hwmon/hwmon2/temp1_input | head -c 2
@@ -120,3 +122,9 @@ label = %output%
 ;exec = nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader
 ;format-prefix = "GPU:"
 ;label = %output%
+
+[module/memory]
+type = internal/memory
+interval = 5
+format = <label>
+label = %gb_used% | %gb_total%
