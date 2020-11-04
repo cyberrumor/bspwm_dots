@@ -1,3 +1,11 @@
+font:
+  normal:
+    family: Terminus
+    style: Regular
+  size: 14
+
+
+
 window:
   padding:
     x: 16
@@ -15,7 +23,7 @@ colors:
     cursor: '#F0F0F0'
 
   normal:
-    black:   '#000000'
+    black:   '#404040'
     red:     '#FF9898'
     green:   '#98FF98'
     yellow:  '#FFFF98'
@@ -25,7 +33,7 @@ colors:
     white:   '#F0F0F0'
 
   bright:
-    black:   '#000000'
+    black:   '#404040'
     red:     '#FF7878'
     green:   '#78FF78'
     yellow:  '#FFFF78'

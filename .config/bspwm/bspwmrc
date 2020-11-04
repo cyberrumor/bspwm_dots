@@ -3,13 +3,13 @@ nb="#F0F0F0"
 ab="#98FF98"
 
 # load polybar
-$HOME/.config/polybar/launch.sh
+$HOME/.config/polybar/launch.sh &
 
 # set wallpaper
-# feh --bg-scale /home/cyberrumor/Pictures/SpaceTiltShifted.jpg
+feh --bg-scale /home/cyberrumor/Pictures/black_doe.png &
 
-# set refresh rate, scripts in /usr/local/bin. See man xrandr.
-hz144
+# start notification daemon
+dunst &
 
 # fix java applications, requires wmname package
 wmname LG3D

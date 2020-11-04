@@ -23,6 +23,9 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
+# set cursor theme
+xsetroot -cursor_name left_ptr
+
 # numlock
 numlockx on
 
