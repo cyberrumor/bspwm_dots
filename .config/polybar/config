@@ -93,16 +93,7 @@ label-mounted = %used% | %total%
 label-padding-right = 4
 
 
-
-# for integrated graphics
-#[module/gpu]
-#type = custom/script
-#exec = cat /sys/devices/pci0000:00/0000:00:08.1/0000:09:00.0/hwmon/hwmon2/temp1_input | head -c 2
-#interval = 5
-#format-prefix = "GPU:"
-#label = %output%
-
-# for rx580
+; cpu
 [module/temp]
 type = custom/script
 exec = cat /sys/class/hwmon/hwmon3/temp1_input | head -c 2
@@ -110,6 +101,7 @@ interval = 5
 format-prefix = "CPU:"
 label = %output%
 
+; for integrated graphics
 [module/gpu]
 type = custom/script
 exec = cat /sys/class/hwmon/hwmon2/temp1_input | head -c 2
@@ -117,6 +109,15 @@ interval = 5
 format-prefix = "GPU:"
 label = %output%
 
+; rx580
+;[module/gpu]
+;type = custom/script
+;exec = cat /sys/class/hwmon/hwmon2/temp1_input | head -c 2
+;interval = 5
+;format-prefix = "GPU:"
+;label = %output%
+
+; nvidia
 ;[module/gputemp]
 ;type = custom/script
 ;exec = nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader

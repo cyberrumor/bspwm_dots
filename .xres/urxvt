@@ -2,8 +2,8 @@ URxvt*foreground:		myfg
 URxvt*background:		mybg
 URxvt*highlightColor:		myaccent
 URxvt*highlightTextColor:	mybg
-URxvt*font:			xft:Terminus:style=Regular:size=14
+URxvt*font:			xft:Terminus:style=Regular:size=16
 URxvt*internalBorder:		20
-URxvt*transparent:		false
-URxvt*shading:			0
+URxvt*transparent:		true
+URxvt*shading:			15
 URxvt*scrollBar:		false

@@ -4,7 +4,7 @@
 
 # terminal emulator
 alt + Return
-	alacritty
+	urxvt
 
 # program launcher
 alt + d

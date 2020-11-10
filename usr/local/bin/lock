@@ -5,3 +5,5 @@ maim /tmp/screenshot.png && \
 		rm /tmp/screenshot.png && \
 		i3lock -i /tmp/blurshot.png && \
 		rm /tmp/blurshot.png &
+
+sleep 5; xset dpms force off
