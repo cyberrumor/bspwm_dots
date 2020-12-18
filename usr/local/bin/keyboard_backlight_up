@@ -1,0 +1,28 @@
+#!/usr/bin/python3
+
+import time
+
+def cat(file):
+	f = open(f'{location}{file}', 'r')
+	result = int(f.read())
+	f.close()
+	return result
+
+def write(file, r):
+	for i in r:
+		f = open(f'{location}{file}', 'w')
+		f.write(str(i))
+		f.close()
+		time.sleep(0.005)
+	return
+
+if __name__ == '__main__':
+	location = '/sys/class/leds/smc::kbd_backlight/'
+	max_brightness = cat('max_brightness')
+	brightness = cat('brightness')
+	step = int(max_brightness / 15)
+	if max_brightness - brightness <= step:
+		write('brightness', range(brightness, max_brightness))
+	else:
+		write('brightness', range(brightness, brightness + step))
+	exit()
